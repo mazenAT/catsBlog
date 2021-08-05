@@ -1,0 +1,22 @@
+<%- include("partials/header")%>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New Cat</div>
+    <form class="ui form" action="/cats" method="post">
+      <div class="field">
+        <label>name</label>
+        <input type="text" name="cat[name]" placeholder="name">
+      </div>
+      <div class="field">
+        <label>Image</label>
+        <input type="text" name="cat[image]" placeholder="image">
+      </div>
+      <div class="field">
+        <label>Body</label>
+        <textarea name="cat[body]" placeholder="Body goes here" required></textarea>
+      </div>
+        <button class="ui violet basic button" type="submit" name="submit">Add</button>
+    </form>
+</div>
+
+<%- include("partials/footer")%>

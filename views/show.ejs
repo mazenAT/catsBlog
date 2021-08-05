@@ -1,0 +1,23 @@
+<%-include("partials/header") %>
+<div class="ui main text container segment">
+  <div class="ui header"> <%=cat.name%> </div>
+  <div class="ui top attached">
+    <div class="item">
+      <img src="<%=cat.image%>" class="ui centered rounded image" alt="">
+      <div class="content">
+        <span><%=cat.created.toDateString()%></span>
+      </div>
+      <div class="description">
+        <p><%=cat.body%></p>
+      </div>
+      <a href="/cats/<%=cat._id%>/edit" class="ui orange basic button">Update</a>
+      <form id="delete"  action="/cats/<%= cat._id %>?_method=DELETE" method="post">
+        <button type="submit" class="ui red basic button">Delete</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+
+<%- include("partials/footer") %>
